@@ -937,4 +937,4 @@ with gr.Blocks(theme="Hev832/EasyAndCool") as app:
                 outputs=[md_download_logs]
             )
     
-    app.queue(concurrency_count=1, max_size=50, api_open=config.api).launch(share=config.colab)
+    app.launch(share=True)

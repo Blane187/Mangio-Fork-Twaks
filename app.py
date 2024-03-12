@@ -14,7 +14,7 @@ from scipy.io import wavfile
 from datetime import datetime
 from urllib.parse import urlparse
 from mega import Mega
-
+os.system ("pip install -r requirements-ipe.txt")
 os.system("python models.py")
 
 now_dir = os.getcwd()

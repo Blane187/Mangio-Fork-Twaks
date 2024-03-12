@@ -52,12 +52,12 @@ if os.path.exists('/content/'):
 
     print("-------------------------------")
         # Check if the file exists at the specified path
-    if os.path.exists('/content/Retrieval-based-Voice-Conversion-WebUI/hubert_base.pt'):
+    if os.path.exists('/content/Mangio-Fork-Twaks/hubert_base.pt'):
         # If the file exists, print a statement saying so
-        print("File /content/Retrieval-based-Voice-Conversion-WebUI/hubert_base.pt already exists. No need to download.")
+        print("File /content/Mangio-Fork-Twaks/hubert_base.pt already exists. No need to download.")
     else:
         # If the file doesn't exist, print a statement saying it's downloading
-        print("File /content/Retrieval-based-Voice-Conversion-WebUI/hubert_base.pt does not exist. Starting download.")
+        print("File /content/Mangio-Fork-Twaks/hubert_base.pt does not exist. Starting download.")
 
         # Make a request to the URL
         response = requests.get('https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/hubert_base.pt')
@@ -65,9 +65,9 @@ if os.path.exists('/content/'):
         # Ensure the request was successful
         if response.status_code == 200:
             # If the response was a success, save the content to the specified file path
-            with open('/content/Retrieval-based-Voice-Conversion-WebUI/hubert_base.pt', 'wb') as f:
+            with open('/content/Mangio-Fork-Twaks/hubert_base.pt', 'wb') as f:
                 f.write(response.content)
-            print("Download complete. File saved to /content/Retrieval-based-Voice-Conversion-WebUI/hubert_base.pt.")
+            print("Download complete. File saved to /content/Mangio-Fork-Twaks/hubert_base.pt.")
         else:
             # If the response was a failure, print an error message
             print("Failed to download file. Status code: " + str(response.status_code) + ".")
@@ -1474,10 +1474,10 @@ def zip_downloader(model):
     else:
         return f'./weights/{model}.pth', "Could not find Index file."
 
-with gr.Blocks(theme=gr.themes.Base(), title='Mangio-RVC-Web 💻') as app:
+with gr.Blocks(theme='Hev832/EasyAndCool', title='Mangio-RVC-Web 💻') as app:
     with gr.Tabs():
         with gr.TabItem("Inference"):
-            gr.HTML("<h1> Easy GUI v2 (rejekts) - adapted to Mangio-RVC-Fork 💻 [With extra features and fixes by kalomaze & alexlnkp]</h1>")
+            gr.HTML("<h1> Easy GUI v2 (rejekts) - adapted to Mangio-RVC-Fork 💻</h1>")
 
             # Inference Preset Row
             # with gr.Row():
